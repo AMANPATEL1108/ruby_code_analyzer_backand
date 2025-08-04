@@ -197,3 +197,20 @@ def find_class_nodes(node)
   end
   result
 end
+
+class Parser::AST::Node
+  def const_name
+    return nil unless type == :const
+
+    parts = []
+    node = self
+    while node
+      parts.unshift(node.children[1].to_s)
+      node = node.children[0]
+      break unless node.is_a?(Parser::AST::Node)
+    end
+    parts.join("::")
+  end
+end
+
+puts "🚀 Sinatra Ruby analyzer is running on http://localhost:4567"
