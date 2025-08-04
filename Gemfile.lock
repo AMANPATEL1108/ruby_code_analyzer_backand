@@ -9,9 +9,12 @@ GEM
     logger (1.7.0)
     mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
+    nio4r (2.7.4)
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
+    puma (6.6.1)
+      nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.0)
     rack-cors (3.0.0)
@@ -47,6 +50,7 @@ PLATFORMS
 DEPENDENCIES
   json
   parser
+  puma
   rack-cors
   rackup
   sinatra
