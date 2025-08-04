@@ -4,7 +4,6 @@ gem 'sinatra'
 gem 'json'
 gem 'parser'
 gem 'rack-cors'
-gem 'thin'
 gem 'rackup'
 gem 'puma'
-
+gem 'thin', '~> 1.8.1'  
