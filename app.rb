@@ -11,6 +11,7 @@ use Rack::Cors do
   end
 end
 
+
 post '/analyze' do
   content_type :json
   begin
@@ -214,3 +215,9 @@ class Parser::AST::Node
 end
 
 puts "🚀 Sinatra Ruby analyzer is running on http://localhost:4567"
+
+
+get '/' do
+  content_type :json
+  { message: "✅ Ruby Analyzer API is running." }.to_json
+end
