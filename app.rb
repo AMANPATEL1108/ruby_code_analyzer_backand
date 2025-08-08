@@ -108,7 +108,6 @@ def analyze_ruby_code(ast, buffer)
       }
     }
   else
-    # Process class-based structure
     class_nodes.each do |class_node|
       class_name = class_node.children[0].const_name
       inherits_from = class_node.children[1]&.const_name
